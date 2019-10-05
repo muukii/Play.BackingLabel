@@ -13,7 +13,23 @@
 		4B10690C23488BB60036D51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B10690B23488BB60036D51C /* Assets.xcassets */; };
 		4B10690F23488BB60036D51C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B10690E23488BB60036D51C /* Preview Assets.xcassets */; };
 		4B10691223488BB60036D51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B10691023488BB60036D51C /* LaunchScreen.storyboard */; };
+		4B10691F2348A1580036D51C /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B10691D2348A14D0036D51C /* RevealServer.framework */; };
+		4B1069202348A1580036D51C /* RevealServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B10691D2348A14D0036D51C /* RevealServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B1069212348A1580036D51C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B1069202348A1580036D51C /* RevealServer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B10690223488BB40036D51C /* BackingLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackingLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		4B10690E23488BB60036D51C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B10691123488BB60036D51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B10691323488BB60036D51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B10691D2348A14D0036D51C /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B10691F2348A1580036D51C /* RevealServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				4B10690423488BB40036D51C /* BackingLabel */,
 				4B10690323488BB40036D51C /* Products */,
+				4B10691E2348A1580036D51C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +75,7 @@
 		4B10690423488BB40036D51C /* BackingLabel */ = {
 			isa = PBXGroup;
 			children = (
+				4B10691D2348A14D0036D51C /* RevealServer.framework */,
 				4B10690523488BB40036D51C /* AppDelegate.swift */,
 				4B10690723488BB40036D51C /* SceneDelegate.swift */,
 				4B10690923488BB40036D51C /* ContentView.swift */,
@@ -75,6 +95,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4B10691E2348A1580036D51C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +112,7 @@
 				4B1068FE23488BB40036D51C /* Sources */,
 				4B1068FF23488BB40036D51C /* Frameworks */,
 				4B10690023488BB40036D51C /* Resources */,
+				4B1069212348A1580036D51C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,6 +315,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BackingLabel/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BackingLabel",
+				);
 				INFOPLIST_FILE = BackingLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +338,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BackingLabel/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BackingLabel",
+				);
 				INFOPLIST_FILE = BackingLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
